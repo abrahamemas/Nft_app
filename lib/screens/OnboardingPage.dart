@@ -7,7 +7,7 @@ import 'package:nft_app/screens/introScreen3.dart';
 import 'package:nft_app/screens/introscreen2.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../widgets/CustomButton.dart';
+import '../Buttons/CustomButton.dart';
 
 
 class OnboardingPage extends StatefulWidget {
@@ -45,7 +45,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                width: 400,
+                width: 450,
                 height: 350,
                 decoration: BoxDecoration(
                   color: const Color(0xFF253341),
@@ -99,7 +99,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
         child: Container(
           child: Text(
             textToShow,
-            style: GoogleFonts.josefinSans(
+            style: GoogleFonts.nunito(
               color: Colors.white,
               fontSize: 34,
               fontWeight: FontWeight.w800,
@@ -120,7 +120,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   child : 
                     Text(
                 "Buy and sell digital items",
-                style: GoogleFonts.josefinSans(
+                style: GoogleFonts.nunito(
                    color: Colors.white,
                     fontSize: 17,
                     fontWeight: FontWeight.w400,
