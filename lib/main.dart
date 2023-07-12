@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nft_app/screens/SignInPage.dart';
+import 'package:nft_app/screens/OnboardingPage.dart';
 
  void main() {
   runApp(const NftApp());
@@ -7,13 +7,19 @@ import 'package:nft_app/screens/SignInPage.dart';
 
 class NftApp extends StatelessWidget {
   const NftApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'NftApp',
-      home: SignInPage()
+      theme: ThemeData(
+         primaryColor: Color(0xFF15202B),
+         hintColor : Color(0xFF15202B),
+
+
+      ),
+      home: OnboardingPage()
     );
   }
 }

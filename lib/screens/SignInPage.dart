@@ -7,6 +7,7 @@ import '../Buttons/Button.dart';
 import '../Buttons/Button2.dart';
 import '../Buttons/CustomButton3.dart';
 
+
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
 
@@ -19,45 +20,47 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF15202B),
+       extendBodyBehindAppBar: true,
+      appBar: AppBar(
+          leading: Transform.translate(
+          offset: Offset(25, 8.0),
+          child: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+              size: 28,
+            ),
+            onPressed: () {
+              Navigator.push(
+                         context,
+                           MaterialPageRoute(
+                            builder: (context) => OnboardingPage2(),
+                   ),
+               );
+              
+            },
+          ),
+        ),
+           title: Transform.translate(
+          offset: Offset(4, 10.0), 
+          child:  Image.asset(
+                      'assets/Logo.png',
+                    ),
+        ),
+        centerTitle: true,
+        elevation: 0.0,
+         backgroundColor: Colors.transparent,
+      ),
 
-      body: SingleChildScrollView(
-        child: Container(
+      body: 
+         Container(
           height: MediaQuery.of(context).size.height,
           child: LayoutBuilder(
             builder: (context, constraints) {
-              final double logoSize = constraints.maxWidth * 0.4;
-              final double arrowSize = constraints.maxWidth * 0.15;
-
+              
               return Stack(
                 children: [
-                  Positioned(
-                    top: constraints.maxHeight * 0.0,
-                    left: constraints.maxWidth * 0.32,
-                    child: Image.asset(
-                      'assets/Logo.png',
-                      height: logoSize.isFinite ? logoSize : 0.0,
-                      width: logoSize.isFinite ? logoSize : 0.0,
-                    ),
-                  ),
-                  Positioned(
-                    top: constraints.maxHeight * 0.06,
-                    right: constraints.maxWidth * 0.82,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OnboardingPage2(),
-                          ),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/Icon Arrow.png',
-                        height: arrowSize.isFinite ? arrowSize : 0.0,
-                        width: arrowSize.isFinite ? arrowSize : 0.0,
-                      ),
-                    ),
-                  ),
+                  
                   Padding(
                     padding: EdgeInsets.only(bottom: 520),
                     child: Align(
@@ -72,7 +75,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                   Positioned(
-                    top: constraints.maxHeight * 0.39,
+                    top: constraints.maxHeight * 0.38,
                     left: constraints.maxWidth * 0.1,
                     child: Text(
                       "Choose your wallet",
@@ -84,7 +87,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                   Positioned(
-                    top: constraints.maxHeight * 0.47,
+                    top: constraints.maxHeight * 0.45,
                     left: constraints.maxWidth * 0.05,
                     right: constraints.maxWidth * 0.08,
                     child: Text(
@@ -424,7 +427,7 @@ class _SignInPageState extends State<SignInPage> {
                                                           Navigator.push(
                                                           context,
                                                            MaterialPageRoute(
-                                                            builder: (context) => SetProfilePage(),
+                                                            builder: (context) =>SetProfilePage(),
                                                            ),
                                                      );
                                                         },
@@ -567,7 +570,7 @@ class _SignInPageState extends State<SignInPage> {
             },
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }
