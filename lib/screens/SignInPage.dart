@@ -135,7 +135,7 @@ class _SignInPageState extends State<SignInPage> {
                                               topRight: Radius.circular(25),
                                             ),
                                            ),
-                                                                               child: Stack(
+                                            child: Stack(
                                             children: [
                                               Padding(
                                                 padding: EdgeInsets.only(bottom: 210, right: 80),
