@@ -80,7 +80,7 @@ class _OnboardingPage2State extends State<OnboardingPage2> {
               alignment: Alignment.bottomCenter,
                child: SizedBox(
                  width: 255,
-                 height: 45,
+                 height: 50,
                  child: CustomButton2(
                    text: 'Connect with Wallet',
                    onPressed: () {

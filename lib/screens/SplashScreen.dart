@@ -9,7 +9,8 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-         Navigator.push(
+
+      Navigator.push(
            context,
              MaterialPageRoute(
               builder: (context) => HomeScreen(),
@@ -17,7 +18,7 @@ class WelcomeScreen extends StatelessWidget {
                );
       },
       child: Scaffold(
-           backgroundColor: Color.fromRGBO(28, 33, 42, 1),
+           backgroundColor:  Color.fromRGBO(25, 33, 41, 1),
            body: SingleChildScrollView(
               child: Stack(
                 children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nft_app/screens/OnboardingPage2.dart';
 import 'package:nft_app/screens/SetProfile.dart';
@@ -43,8 +44,9 @@ class _SignInPageState extends State<SignInPage> {
         ),
            title: Transform.translate(
           offset: Offset(4, 10.0), 
-          child:  Image.asset(
-                      'assets/Logo.png',
+          child:  SvgPicture.asset(
+                      'assets/Logo.svg',
+                      
                     ),
         ),
         centerTitle: true,
