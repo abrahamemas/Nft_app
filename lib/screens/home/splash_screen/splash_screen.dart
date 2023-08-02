@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
               builder: (context) => HomeScreen(),
                 ),
                );
-      },
+      },                       
       child: Scaffold(
            backgroundColor:  Color.fromRGBO(25, 33, 41, 1),
            body: SingleChildScrollView(

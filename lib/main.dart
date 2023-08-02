@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nft_app/screens/OnboardingPage.dart';
+import 'package:nft_app/screens/HomeScreen.dart';
 
  void main() {
   runApp(const NftApp());
@@ -19,7 +19,7 @@ class NftApp extends StatelessWidget {
 
 
       ),
-      home: OnboardingPage()
+      home: HomeScreen()
     );
   }
 }
